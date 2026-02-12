@@ -1,4 +1,8 @@
-import { BreadcrumbNav, FilterSidebar, ProductGrid } from "@/features/users";
+import {
+  BreadcrumbNav,
+  FilterSidebar,
+  ProductGrid,
+} from "@/features/users/components";
 
 export default function UserPage() {
   return (

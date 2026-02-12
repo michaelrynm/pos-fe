@@ -1,4 +1,4 @@
-import { UserHeader } from "@/features/users";
+import { UserHeader } from "@/features/users/components";
 
 export default function UserLayout({
   children,
