@@ -1,6 +1,6 @@
 // components/pos/product-grid.tsx
 import { ProductCard } from "./product-card";
-import { Product } from "@/lib/types";
+import { Product } from "../types";
 
 const products: Product[] = [
   {
