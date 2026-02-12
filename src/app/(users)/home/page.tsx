@@ -1,7 +1,17 @@
-export default function HomePage () {
+import BookingCard from "@/features/home/components/book-card";
+import BrandStory from "@/features/home/components/brand-story";
+import Hero from "@/features/home/components/hero";
+import ProductList from "@/features/home/components/products";
+import TestimonyCard from "@/features/home/components/testimony-card";
+
+export default function HomePage() {
   return (
     <div>
-      <p className="text-8xl">for landing page</p>
+      <Hero />
+      <BrandStory />
+      <ProductList />
+      <BookingCard />
+      <TestimonyCard />
     </div>
-  )
+  );
 }
