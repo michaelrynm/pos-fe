@@ -10,7 +10,7 @@ export default function UserPage() {
       <BreadcrumbNav />
 
       <div className="flex gap-6">
-        <div className="hidden lg:block w-[260px] shrink-0">
+        <div className="hidden lg:block w-65 shrink-0">
           <FilterSidebar />
         </div>
 

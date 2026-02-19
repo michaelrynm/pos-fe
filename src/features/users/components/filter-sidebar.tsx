@@ -13,11 +13,11 @@ export function FilterSidebar() {
           variant="outline"
           size="sm"
         >
-          Button
+          Reset
         </Button>
       </CardHeader>
 
-      <hr className="mx-6 w-auto border-1 border-secondary" />
+      <hr className="mx-6 w-auto border border-secondary" />
 
       <CardContent className="space-y-6 text-sm">
         <div className="space-y-3">
