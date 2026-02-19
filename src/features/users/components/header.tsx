@@ -2,11 +2,12 @@
 
 import { Bell, Heart, Search, ShoppingBag } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { CartDropdown } from "./cart";
 
 export function UserHeader() {
   return (
-    <header className="bg-black text-white px-6 py-4">
-      <div className="container flex items-center justify-between">
+    <header className="bg-black text-white py-4 px-5 md:px-24">
+      <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
             src="https://companieslogo.com/img/orig/SBUX-0200dcbd.png?t=1740461378"
@@ -27,7 +28,8 @@ export function UserHeader() {
         <div className="flex items-center gap-4">
           <Heart className="w-5 h-5 cursor-pointer" />
           <Bell className="w-5 h-5 cursor-pointer" />
-          <ShoppingBag className="w-5 h-5 cursor-pointer" />
+          <CartDropdown />
+
           <div className="w-8 h-8 rounded-full bg-muted" />
         </div>
       </div>

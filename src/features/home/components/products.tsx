@@ -21,28 +21,34 @@ export default function ProductList() {
   const isAllVisible = visibleCount >= PRODUCTS.length;
 
   return (
-    <div className="px-24">
-      <p className="text-5xl font-semibold">Our Products</p>
+    <div className="mx-auto px-4 sm:px-8 md:px-24">
+      <p className="text-3xl sm:text-4xl md:text-5xl font-semibold">
+        Our Products
+      </p>
 
-      <div className="mt-8 grid grid-cols-4 gap-6">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {PRODUCTS.slice(0, visibleCount).map((_, index) => (
           <ProductCard key={index} />
         ))}
       </div>
 
-      {!isAllVisible ? (
-        <div className="w-full flex justify-center mt-10">
-          <Button onClick={handleLoadMore} className="px-6 py-6 rounded-3xl">
+      <div className="w-full flex justify-center mt-10">
+        {!isAllVisible ? (
+          <Button
+            onClick={handleLoadMore}
+            className="px-6 py-3 sm:py-4 rounded-3xl"
+          >
             View All
           </Button>
-        </div>
-      ) : (
-        <div className="w-full flex justify-center mt-10">
-          <Button onClick={handleViewLess} className="px-6 py-6 rounded-3xl">
+        ) : (
+          <Button
+            onClick={handleViewLess}
+            className="px-6 py-3 sm:py-4 rounded-3xl"
+          >
             View Less
           </Button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
