@@ -2,7 +2,7 @@ import { GalleryVerticalEnd } from "lucide-react";
 
 import { LoginForm } from "@/features/internal/auth/components/login-form";
 
-import background from "../../../../../public/home/hero-bg.jpg";
+import background from "../../../../public/home/hero-bg.jpg";
 import Image from "next/image";
 
 export default function InternalLogin() {
