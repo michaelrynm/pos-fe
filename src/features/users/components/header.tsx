@@ -80,10 +80,7 @@ export function UserHeader() {
             className="rounded-full pl-9 bg-transparent border-white text-white placeholder:text-white/50"
           />
         </div>
-
-        <Button variant="ghost" size="icon" className="text-white">
-          <CartDropdown />
-        </Button>
+        <CartDropdown />
       </div>
     </header>
   );

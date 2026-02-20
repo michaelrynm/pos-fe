@@ -46,7 +46,6 @@ export function CartDropdown() {
       <Button
         variant="ghost"
         size="icon"
-        // className="text-white"
         onClick={() => setOpen((v) => !v)}
         className={cn("text-white", open && "text-black bg-white")}
         aria-label="Open cart"
@@ -58,22 +57,6 @@ export function CartDropdown() {
           </span>
         )}
       </Button>
-      {/* <button
-        onClick={() => setOpen((v) => !v)}
-        className={cn(
-          "relative flex items-center justify-center rounded-full transition-all duration-200",
-          "bg-transparent hover:bg-primary hover:text-primary-foreground",
-          open && "bg-primary text-primary-foreground",
-        )}
-        aria-label="Open cart"
-      >
-        <ShoppingBag className="w-5 h-5" />
-        {totalItems > 0 && (
-          <span className="absolute -top-2 -right-2 min-w-4.5 h-4.5 flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
-            {totalItems > 99 ? "99+" : totalItems}
-          </span>
-        )}
-      </button> */}
 
       {/* ── Dropdown Panel ── */}
       <div
@@ -107,7 +90,7 @@ export function CartDropdown() {
         </div>
 
         {/* Items */}
-        <div className="overflow-y-auto max-h-[360px] divide-y divide-border">
+        <div className="overflow-y-auto max-h-90 divide-y divide-border">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-14 gap-3 text-muted-foreground">
               <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center">
