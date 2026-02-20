@@ -1,4 +1,3 @@
-// components/pos/product-card.tsx
 "use client";
 
 import Image from "next/image";
@@ -19,7 +18,7 @@ export function ProductCard({ product }: Props) {
         className="rounded-2xl hover:shadow-md transition-shadow cursor-pointer pt-0"
         onClick={() => setOpen(true)}
       >
-        <div className="relative w-full h-[120px] sm:h-[150px] md:h-[180px] bg-muted overflow-hidden">
+        <div className="relative w-full h-25 lg:h-45 bg-muted rounded-t-2xl overflow-hidden">
           <Image
             src={product.thumbnail}
             alt={product.name}

@@ -43,7 +43,22 @@ export function CartDropdown() {
   return (
     <div ref={ref} className="relative">
       {/* ── Trigger Button ── */}
-      <button
+      <Button
+        variant="ghost"
+        size="icon"
+        // className="text-white"
+        onClick={() => setOpen((v) => !v)}
+        className={cn("text-white", open && "text-black bg-white")}
+        aria-label="Open cart"
+      >
+        <ShoppingBag className="w-5 h-5" />
+        {totalItems > 0 && (
+          <span className="absolute -top-2 -right-2 min-w-4.5 h-4.5 flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
+            {totalItems > 99 ? "99+" : totalItems}
+          </span>
+        )}
+      </Button>
+      {/* <button
         onClick={() => setOpen((v) => !v)}
         className={cn(
           "relative flex items-center justify-center rounded-full transition-all duration-200",
@@ -54,17 +69,17 @@ export function CartDropdown() {
       >
         <ShoppingBag className="w-5 h-5" />
         {totalItems > 0 && (
-          <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
+          <span className="absolute -top-2 -right-2 min-w-4.5 h-4.5 flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
             {totalItems > 99 ? "99+" : totalItems}
           </span>
         )}
-      </button>
+      </button> */}
 
       {/* ── Dropdown Panel ── */}
       <div
         className={cn(
           "absolute right-0 top-[calc(100%+12px)] z-50",
-          "w-[360px] rounded-2xl overflow-hidden",
+          "lg:w-90 sm:w-60 rounded-2xl overflow-hidden",
           "bg-background border border-border shadow-2xl",
           "transition-all duration-300 origin-top-right",
           open
