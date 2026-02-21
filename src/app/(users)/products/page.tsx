@@ -6,7 +6,7 @@ import {
 
 export default function UserPage() {
   return (
-    <div className="py-6 space-y-6 px-6 lg:px-24">
+    <div className="container py-6 space-y-6 px-6 lg:px-24">
       <BreadcrumbNav />
 
       <div className="lg:hidden">
@@ -14,7 +14,7 @@ export default function UserPage() {
       </div>
 
       <div className="flex gap-6">
-        <div className="hidden lg:block w-[260px] shrink-0">
+        <div className="hidden lg:block w-65 shrink-0">
           <FilterSidebar />
         </div>
 

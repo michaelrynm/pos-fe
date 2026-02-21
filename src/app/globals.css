@@ -135,11 +135,22 @@ h2 {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

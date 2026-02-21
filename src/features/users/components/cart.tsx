@@ -43,28 +43,26 @@ export function CartDropdown() {
   return (
     <div ref={ref} className="relative">
       {/* ── Trigger Button ── */}
-      <button
+      <Button
+        variant="ghost"
+        size="icon"
         onClick={() => setOpen((v) => !v)}
-        className={cn(
-          "relative flex items-center justify-center rounded-full transition-all duration-200",
-          "bg-transparent hover:bg-primary hover:text-primary-foreground",
-          open && "bg-primary text-primary-foreground",
-        )}
+        className={cn("text-white", open && "text-black bg-white")}
         aria-label="Open cart"
       >
         <ShoppingBag className="w-5 h-5" />
         {totalItems > 0 && (
-          <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
+          <span className="absolute -top-2 -right-2 min-w-4.5 h-4.5 flex items-center justify-center rounded-full bg-rose-500 text-white text-[10px] font-bold px-1 leading-none">
             {totalItems > 99 ? "99+" : totalItems}
           </span>
         )}
-      </button>
+      </Button>
 
       {/* ── Dropdown Panel ── */}
       <div
         className={cn(
           "absolute right-0 top-[calc(100%+12px)] z-50",
-          "w-[360px] rounded-2xl overflow-hidden",
+          "lg:w-90 sm:w-60 rounded-2xl overflow-hidden",
           "bg-background border border-border shadow-2xl",
           "transition-all duration-300 origin-top-right",
           open
@@ -92,7 +90,7 @@ export function CartDropdown() {
         </div>
 
         {/* Items */}
-        <div className="overflow-y-auto max-h-[360px] divide-y divide-border">
+        <div className="overflow-y-auto max-h-90 divide-y divide-border">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-14 gap-3 text-muted-foreground">
               <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center">
