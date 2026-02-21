@@ -73,7 +73,7 @@ export function UserHeader() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center w-[400px] relative">
+        <div className="hidden md:flex items-center w-100 relative">
           <Search className="absolute left-3 w-4 h-4 text-white" />
           <Input
             placeholder="Search product..."

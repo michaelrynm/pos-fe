@@ -12,6 +12,7 @@ interface Props {
 
 export function ProductCard({ product }: Props) {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <Card
@@ -40,24 +41,7 @@ export function ProductCard({ product }: Props) {
               {product.categoryId}
             </p>
 
-            <div className="flex items-center gap-1">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 7 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.3291 0L4.1149 2.41844H6.6578L4.60055 3.91312L5.38635 6.33156L3.3291 4.83688L1.27185 6.33156L2.05765 3.91312L0.000403643 2.41844H2.5433L3.3291 0Z"
-                  fill="#FFCC41"
-                />
-              </svg>
-
-              <p className="text-gray-500 text-xs font-semibold">
-                4.5 | 1000 Sold
-              </p>
-            </div>
+            <div className="flex items-center justify-center gap-1"></div>
           </div>
         </CardContent>
       </Card>
