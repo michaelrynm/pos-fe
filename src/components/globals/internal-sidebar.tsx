@@ -54,7 +54,7 @@ const settingsMenu = [
 
 export function InternalSidebar() {
   return (
-    <Sidebar variant="sidebar">
+    <Sidebar>
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-primary" />
