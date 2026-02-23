@@ -1,10 +1,10 @@
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Settings, Bell, Search } from "lucide-react";
+import { Settings, Bell, Search, Sidebar } from "lucide-react";
 
 export default function DashboardHeader() {
   return (
-    <div className="border-b-2 px-4 sm:px-6 py-3 sm:py-5 flex items-center justify-between gap-3">
+    <div className="border-b-2 px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between gap-3">
       <div className="flex items-center flex-1 max-w-xs">
         <div className="sm:hidden bg-[#F7F7F7] p-2 rounded-lg">
           <Search className="w-5 h-5" />

@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 
 const mainMenu = [
-  { title: "Dashboard", icon: LayoutDashboard, url: "#" },
+  { title: "Dashboard", icon: LayoutDashboard, url: "/dashboard" },
   { title: "Super Admin", icon: Users, url: "#" },
 ];
 
