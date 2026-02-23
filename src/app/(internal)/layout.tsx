@@ -13,12 +13,7 @@ export default function InternalLayout({
   return (
     <SidebarProvider>
       <InternalSidebar />
-      <SidebarInset>
-        <main>
-          <SidebarTrigger />
-          {children}
-        </main>
-      </SidebarInset>
+      <main className="w-full">{children}</main>
     </SidebarProvider>
   );
 }
