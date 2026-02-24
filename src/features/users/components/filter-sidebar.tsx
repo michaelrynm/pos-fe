@@ -1,7 +1,14 @@
+// components/pos/filter-sidebar.tsx
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { SlidersHorizontal } from "lucide-react";
 
 function FilterContent() {
@@ -38,25 +45,28 @@ function FilterContent() {
   );
 }
 
-// Sidebar untuk desktop
 export function FilterSidebar() {
   return (
     <>
-      {/* Desktop: sidebar biasa */}
-      <Card className="rounded-2xl hidden lg:block">
+      <Card className="rounded-2xl hidden lg:flex">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-base">Filter</CardTitle>
-          <Button className="rounded-full" variant="outline" size="sm">
+          <Button
+            className="rounded-full outline-blue-900"
+            variant="outline"
+            size="sm"
+          >
             Reset
           </Button>
         </CardHeader>
-        <hr className="mx-6 border-secondary" />
+
+        <hr className="mx-6 w-auto border border-secondary" />
+
         <CardContent>
           <FilterContent />
         </CardContent>
       </Card>
 
-      {/* Mobile: tombol trigger sheet */}
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger asChild>
@@ -65,7 +75,10 @@ export function FilterSidebar() {
               Filter
             </Button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="rounded-t-2xl max-h-[80vh] overflow-y-auto">
+          <SheetContent
+            side="bottom"
+            className="rounded-t-2xl max-h-[80vh] overflow-y-auto"
+          >
             <SheetHeader className="flex flex-row items-center justify-between pr-6 mt-5">
               <SheetTitle>Filter</SheetTitle>
               <Button variant="outline" size="sm" className="rounded-full">
