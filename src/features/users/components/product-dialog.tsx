@@ -3,12 +3,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
@@ -77,13 +72,6 @@ export function ProductDialog({ product, open, onClose, images }: Props) {
     });
     onClose();
   }
-
-  // Compute a fake original price for display (20% higher) — adjust as needed
-  const basePrice = product.basePrice;
-  const originalPrice = (basePrice * 1.25).toFixed(2);
-  const discountPct = Math.round(
-    ((basePrice * 1.25 - basePrice) / (basePrice * 1.25)) * 100,
-  );
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
@@ -156,11 +144,8 @@ export function ProductDialog({ product, open, onClose, images }: Props) {
                 {/* Price row */}
                 <div className="flex items-center gap-3 mt-2 flex-wrap">
                   <span className="text-2xl lg:text-3xl font-bold text-foreground">
-                    IDR {product.basePrice.toLocaleString('id-ID')}
+                    IDR {product.basePrice.toLocaleString("id-ID")}
                   </span>
-                  <Badge className="bg-emerald-500 hover:bg-emerald-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
-                    10%
-                  </Badge>
                 </div>
               </div>
 
@@ -182,7 +167,6 @@ export function ProductDialog({ product, open, onClose, images }: Props) {
                     <Plus className="w-4 h-4" />
                   </button>
                 </div>
-
                 <Button
                   onClick={handleAddToCart}
                   className="rounded-full gap-2 px-6 flex-1 sm:flex-none cursor-pointer"
