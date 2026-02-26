@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/tooltip";
 import { FileText, CirclePlus, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function UserManagementHeader() {
   return (
@@ -63,9 +64,11 @@ export default function UserManagementHeader() {
             <p>Refresh</p>
           </TooltipContent>
         </Tooltip>
-        <Button size={"sm"} className="bg-[#092C4C]">
-          <CirclePlus /> Add user
-        </Button>
+        <Link href={"/dashboard/users/create"}>
+          <Button size={"sm"} className="bg-[#092C4C]">
+            <CirclePlus /> Add user
+          </Button>
+        </Link>
       </div>
     </div>
   );
