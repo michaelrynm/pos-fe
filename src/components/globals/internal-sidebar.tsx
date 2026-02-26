@@ -43,7 +43,7 @@ const inventoryMenu = [
 ];
 
 const usersMenu = [
-  { title: "User Management", icon: ShieldPlus, url: "#" },
+  { title: "User Management", icon: ShieldPlus, url: "/dashboard/users" },
   { title: "Role & Permission", icon: UserRoundCog, url: "#" },
 ];
 
