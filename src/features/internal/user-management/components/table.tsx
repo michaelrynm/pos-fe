@@ -1,8 +1,11 @@
 "use client";
 
 import { DataTable } from "@/components/ui/data-table";
-import { columns, User } from "@/features/internal/user-management/columns";
-import UserTableToolbar from "@/features/internal/user-management/toolbar";
+import {
+  columns,
+  User,
+} from "@/features/internal/user-management/components/columns";
+import UserTableToolbar from "@/features/internal/user-management/components/toolbar";
 
 const data: User[] = [
   {

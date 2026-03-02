@@ -9,7 +9,7 @@ import {
 
 
 
-import CreateUserForm from "@/features/internal/user-management/create-user-form";
+import CreateUserForm from "@/features/internal/user-management/components/create-user-form";
 
 export default function CreateUser() {
   return (

@@ -1,5 +1,5 @@
-import UserManagementHeader from "@/features/internal/user-management/header";
-import UserManagementTable from "@/features/internal/user-management/table";
+import UserManagementHeader from "@/features/internal/user-management/components/header";
+import UserManagementTable from "@/features/internal/user-management/components/table";
 
 export default function UserManagement() {
   return (
